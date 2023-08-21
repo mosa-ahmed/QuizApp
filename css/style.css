@@ -1,0 +1,123 @@
+:root{
+    --main-color:#ef5e23
+}
+body {
+    min-height: 100vh;
+    background-size: 30%;
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='452' height='54.2' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='25' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    font-family: "Changa", sans-serif;
+    overflow: hidden;
+  }
+
+.form-control:focus,
+.form-select:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.correct,
+.correct:hover {
+  --main-color: #7cb518 !important;
+  background-color: var(--main-color);
+  color: #fff !important;
+}
+
+.wrong,
+.wrond:hover {
+  --main-color: #bf0603 !important;
+  background-color: var(--main-color);
+  color: #fff !important;
+}
+.heading{
+    --radius:10px;
+    width: fit-content;
+    padding: 6px;
+    border-radius: var(--radius);
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+.heading h1{
+    font-size: 50px;
+    padding: 15px;
+    background-image: linear-gradient(30deg, #eee, #fff);
+    font-family: "Electrolize", sans-serif;
+    border-radius: inherit;
+}
+.heading::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: conic-gradient(#fc5130, #613dc1);
+    z-index: -1;
+    left: -5px;
+    top: -5px;
+    border-radius: inherit;
+    transform: scale(2) translate(-50%, -50%);
+    scale: 1.1;
+    animation: spinning 7s infinite linear;
+}
+@keyframes spinning {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(45deg);
+    }
+    75% {
+      transform: rotate(315deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .btn-questions,
+.btn-start {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #38369a;
+  --bs-btn-border-color: #38369a;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4c4aae;
+  --bs-btn-hover-border-color: #4c4aae;
+}
+.score-color {
+  color: #434371;
+}
+.btn-category {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #a1c349;
+  --bs-btn-border-color: #a1c349;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #a1c349;
+  --bs-btn-hover-border-color: #a1c349;
+}
+.choices {
+  gap: 10px;
+}
+.choices li {
+  --main-color: #434371;
+  width: calc((100% - 10px) / 2);
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 100vh;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  padding: 5px 12px;
+  transition: background-color 350ms, color 350ms;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choices li:hover {
+  background-color: var(--main-color);
+  color: #f1f1f1;
+}
+
+.question i {
+  cursor: pointer;
+}
